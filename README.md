@@ -87,3 +87,13 @@ We need to be careful when using the Init becuare it will not rerun if we restar
 
 - **Gitpod workflow** :  https://www.gitpod.io/docs/configure/workspaces/tasks
 
+
+### Working with Env Vars
+We can list out all Envirioment Vartiables (Env Vars) using `env.` command
+We can fillter specific env vars using grep e.g `env | grep AWS_`
+
+#### Setting and Unsetting Env Vars
+In the terminal we can set using ` export HELLO='world'`
+In the terminal we can unset using  `unset HELLO`
+we can set env var temporarilly  when just ruuning a command
+
