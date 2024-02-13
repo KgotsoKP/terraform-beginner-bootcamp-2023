@@ -120,3 +120,30 @@ If it is successful you should see a json payload return that looks like this:
 ```
 
 We'll need to generate  AWS CLI credits from IAM User in order to use the AWS CLI
+
+## Terraform Basics
+
+### Terraform Registry
+Terraform sources thire providers and modlues from the Terraform registry which located at registry. [terraform.io](https://registry.terraform.io/)
+
+- **Providers** is an interface to APIs that will allow to create resources in terraform
+- **Modules** are a way to make large amount of terraform code modular, portable and sharable
+
+### Terraform Console
+
+The follwoing are the basic commands for the terraform workflow
+
+```sh
+terraform init #Download the provider exceutable
+terraform plan #The channges that will be applied
+terraform apply #apply the plan -> make actual chages to your infra
+```
+
+- everytime you run `terrafrom apply` you will be asked to confirm the action. You can use `terraform apply --auto-approve` to automatically accpt the changes.
+
+#### Addtional files produced by the commands
+
+```sh
+terraform init -> .terraform (provider to be used in the plan) + lock file
+terraform plan -> terraform state, the state of your plan
+```
