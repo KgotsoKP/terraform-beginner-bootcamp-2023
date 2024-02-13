@@ -97,3 +97,26 @@ In the terminal we can set using ` export HELLO='world'`
 In the terminal we can unset using  `unset HELLO`
 we can set env var temporarilly  when just ruuning a command
 
+### AWS CLI Installation
+
+AWS CLI is installed for the project via the bash script [`./bin/install_aws_cli](./bin/install_aws_cli.sh)
+
+[Getting Started Install (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+[AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+To check if our AWS credentails is configuerd correctly run the following AWS CLI command : 
+```sh
+aws sts get-caller-identity
+```
+If it is successful you should see a json payload return that looks like this:
+
+```json
+{
+    "UserId": "AWRA367QLDCA2DEXAMPLE",
+    "Account": "123456789101",
+    "Arn": "arn:aws:iam::123456789101:user/exampro-terraform-bootcamp"
+}
+```
+
+We'll need to generate  AWS CLI credits from IAM User in order to use the AWS CLI
